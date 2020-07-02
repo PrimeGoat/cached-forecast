@@ -8,7 +8,7 @@ const REDIS_PORT = 6379;
 const APIKEY = process.env.APIKEY || "509c34093897327003a7771db5ba79bc"; // env doesn't always work right for me
 const ZIPAPIKEY = process.env.ZIPAPIKEY || "pyONri4mgibNkLgq8rXtsOf0NtJlZrcUMRZBSXepd9D5g6ownZnb1igWKMbTLGBH";
 const client = redis.createClient(REDIS_PORT, "192.168.1.14");
-const timeout = 5;
+const timeout = 60 * 60 * 5;
 
 
 // Home

@@ -20,13 +20,13 @@
 			<div class="cardContainer">
 				<% for(day of days) { %>
 					<div class="card">
+						<img src="/icons/<%= day.icon %>.png" width="45px"><br>
 						<%= moment.unix(day.time).format('dddd, MMM D') %><br>
 						<%= day.summary %><br><br>
 						Sunrise: <%= moment.unix(day.sunrise).format('dddd, MMM D') %><br>
 						Sunset: <%= moment.unix(day.sunset).format('dddd, MMM D') %><br>
 						Daily low: <%= day.low %><br>
 						Daily high: <%= day.high %><br>
-						<%= //day.icon %><br>
 					</div>
 				<% } %>
 			</div>
