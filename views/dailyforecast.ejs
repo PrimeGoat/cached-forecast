@@ -4,20 +4,30 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Daily Forecast</title>
+		<style>
+			.cardContainer {
+				display: flex;
+				flex-direction: row;
+			}
+			.card {
+				margin: auto;
+				text-align: center;
+			}
+		</style>
 	</head>
 	<body>
 		<div>
 			<div class="cardContainer">
 				<% for(day of days) { %>
 					<div class="card">
-						<%= moment(day.time).format('dddd, MMM D') %><br>
-						<%= day.summary %><br>
-						<%= day.sunrise %><br>
-						<%= day.sunset %><br>
-						<%= day.low %><br>
-						<%= day.high %><br>
-						<%= day.icon %><br>
-						<%= %>
+						<%= moment.unix(day.time).format('dddd, MMM D') %><br>
+						<%= day.summary %><br><br>
+						Sunrise: <%= moment.unix(day.sunrise).format('dddd, MMM D') %><br>
+						Sunset: <%= moment.unix(day.sunset).format('dddd, MMM D') %><br>
+						Daily low: <%= day.low %><br>
+						Daily high: <%= day.high %><br>
+						<%= //day.icon %><br>
+					</div>
 				<% } %>
 			</div>
 		</div>

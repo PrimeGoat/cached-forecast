@@ -118,7 +118,7 @@ const checkForData = async (req, res, next) => {
 
 			if (currentCoords == redisCoords) {
 				let days = parseForecast(parseData);
-				return res.render("dailyforecast", {days});
+				return res.render("dailyforecast", {moment, days});
 
 			}
 			next();
