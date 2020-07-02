@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Daily Forecast</title>
+	</head>
+	<body>
+		<div>
+			<div class="cardContainer">
+				<% for(day of days) { %>
+					<div class="card">
+						<%= moment(day.time).format('dddd, MMM D') %><br>
+						<%= day.summary %><br>
+						<%= day.sunrise %><br>
+						<%= day.sunset %><br>
+						<%= day.low %><br>
+						<%= day.high %><br>
+						<%= day.icon %><br>
+						<%= %>
+				<% } %>
+			</div>
+		</div>
+	</body>
+</html>
